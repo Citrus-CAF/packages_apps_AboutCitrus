@@ -7,4 +7,14 @@
         android:orderInCategory="100"
         android:title="@string/action_channel"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_wishbucket"
+        android:orderInCategory="100"
+        android:title="@string/action_wishbucket"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_bugreport"
+        android:orderInCategory="100"
+        android:title="@string/action_bugreport"
+        app:showAsAction="never" />
 </menu>
