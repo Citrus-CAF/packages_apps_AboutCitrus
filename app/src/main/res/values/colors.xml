@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#257c7d</color>
+    <color name="colorPrimaryDark">#1f6768</color>
+    <color name="colorAccent">#e9cb84</color>
+
+    <color name="cardsbg">#ffffff</color>
+    <color name="dark_grey">#4d4d4d</color>
+    <color name="tab_background">@color/colorPrimary</color>
+    <color name="tab_indicator_color">#FFF</color>
+    <color name="sliding_tabs_text_color">#ffffffff</color>
+</resources>
