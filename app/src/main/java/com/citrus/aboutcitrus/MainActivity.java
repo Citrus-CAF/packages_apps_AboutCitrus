@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
@@ -16,13 +17,17 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    final ThreadLocal<SlidingTabLayout> mSlidingTabLayout = new ThreadLocal<>();
+    ViewPager mViewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        this.initLayout();
+        this.addContent();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +39,33 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void initLayout() {
+        mViewPager = (ViewPager) findViewById(R.id.view_pager);
+        mViewPager.setOffscreenPageLimit(10);
+        mViewPager.setAdapter(new SlidingTabAdapter());
+
+        mSlidingTabLayout.set((SlidingTabLayout) findViewById(R.id.sliding_tabs));
+        mSlidingTabLayout.get().setCustomTabView(R.layout.tab_head, R.id.toolbar_tab_txtCaption);
+        mSlidingTabLayout.get().setSelectedIndicatorColors(getResources().getColor(R.color.colorPrimaryDark));
+        mSlidingTabLayout.get().setViewPager(mViewPager);
+    }
+
+    public void addTab(int layout, String tabTitle) {
+        this.addTab(layout, tabTitle, -1);
+    }
+
+    public void addTab(int layout, String tabTitle, int position) {
+        SlidingTabAdapter mTabs = (SlidingTabAdapter) mViewPager.getAdapter();
+        mTabs.addView(getLayoutInflater().inflate(layout, null), tabTitle, position);
+        mTabs.notifyDataSetChanged();
+        mSlidingTabLayout.get().populateTabStrip();
+    }
+
+    public void addContent() {
+        addTab(R.layout.content_main, "TeamCardinal");
+        addTab(R.layout.content_maintainers, "Maintainers");
     }
 
     @Override
