@@ -139,14 +139,14 @@ public class MainActivity extends AppCompatActivity {
     public void launchAdarshmr(View view) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(getString(R.string.adarshmr_url)));
+        intent.setData(Uri.parse(getString(R.string.dev1_url)));
         startActivity(intent);
     }
 
     public void launchRohit(View view) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(getString(R.string.rohit_url)));
+        intent.setData(Uri.parse(getString(R.string.dev2_url)));
         startActivity(intent);
     }
 }

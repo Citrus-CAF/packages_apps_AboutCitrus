@@ -121,7 +121,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/adarshmrbg"
+                        android:src="@drawable/dev1_bg"
                         tools:ignore="ContentDescription" />
 
                     <LinearLayout
@@ -136,7 +136,7 @@
                             android:layout_height="90dp"
                             android:layout_gravity="center_horizontal"
                             android:scaleType="fitXY"
-                            android:src="@drawable/adarshmr"
+                            android:src="@drawable/dev1"
                             app:riv_border_color="#FFFFFF"
                             app:riv_border_width="4dp"
                             app:riv_oval="true"
@@ -151,7 +151,7 @@
                             android:fontFamily="sans-serif"
                             android:paddingLeft="@dimen/content_inset"
                             android:paddingRight="@dimen/content_inset"
-                            android:text="@string/adarshmr"
+                            android:text="@string/dev1_title"
                             android:textColor="?android:textColorPrimary"
                             android:textSize="@dimen/header_text_size" />
 
@@ -164,7 +164,7 @@
                             android:lineSpacingMultiplier="1.1"
                             android:paddingLeft="@dimen/content_inset"
                             android:paddingRight="@dimen/content_inset"
-                            android:text="@string/founder"
+                            android:text="@string/dev1_summary"
                             android:textColor="?android:textColorSecondary"
                             android:textSize="@dimen/content_text_size" />
 
@@ -207,7 +207,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rohitbg"
+                        android:src="@drawable/dev2_bg"
                         tools:ignore="ContentDescription" />
 
                     <LinearLayout
@@ -222,7 +222,7 @@
                             android:layout_height="90dp"
                             android:layout_gravity="center_horizontal"
                             android:scaleType="fitXY"
-                            android:src="@drawable/rohit"
+                            android:src="@drawable/dev2"
                             app:riv_border_color="#FFFFFF"
                             app:riv_border_width="4dp"
                             app:riv_oval="true"
@@ -237,7 +237,7 @@
                             android:fontFamily="sans-serif"
                             android:paddingLeft="@dimen/content_inset"
                             android:paddingRight="@dimen/content_inset"
-                            android:text="@string/rohit"
+                            android:text="@string/dev2_title"
                             android:textColor="?android:textColorPrimary"
                             android:textSize="@dimen/header_text_size" />
 
@@ -250,7 +250,7 @@
                             android:lineSpacingMultiplier="1.1"
                             android:paddingLeft="@dimen/content_inset"
                             android:paddingRight="@dimen/content_inset"
-                            android:text="@string/co-founder"
+                            android:text="@string/dev2_summary"
                             android:textColor="?android:textColorSecondary"
                             android:textSize="@dimen/content_text_size" />
 

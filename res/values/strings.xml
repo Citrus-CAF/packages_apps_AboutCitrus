@@ -8,19 +8,30 @@
     <string name="citrus_github">https://github.com/Citrus-CAF</string>
     <string name="citrus_channel">https://telegram.me/TheCitrusChannel</string>
 
-    <string name="founder">Founder/Developer</string>
-    <string name="co-founder">Co-Founder/Developer</string>
-    <string name="developer">Developer</string>
-    <string name="maintainer">Maintainer</string>
-
-    <string name="adarshmr">Adarsh MR</string>
-    <string name="adarshmr_url">https://plus.google.com/+AdarshMR1</string>
-    <string name="rohit">Rohit Poroli</string>
-    <string name="rohit_url">https://plus.google.com/+RohitPoroli</string>
-
     <string name="about_citrus">Citrus-CAF, unlike the name suggests, was initially based off CyanogenMod in the early days of its inception, we even had another name at that point. Later, taking into consideration feedbacks of the very first slew of testers and carefully studying the needs and demands of our users, we rebased the project to Code Aurora Sources, more commonly known as CAF. Time went by and Nougat released, and we decided that it was time, Citrus-CAF had to see the daylight. We rebased everything to the brand spanking Nougat. Realising the potential of CAF tags, and how each altered the device performance on different SoCs, we decided to keep our sources independent for each chipset on our GitHub. The Xiaomi Redmi Note 3 was the first device to get the full fledged taste of our Tangy Nougat. In the beginning, it was just two people behind , but in time, a lot of people joined us, each giving their own contribution.</string>
 
     <string name="about_citrus2">Citrus-CAF was built to create a never-before combination of customization &amp; performance, incorporating the features that our community expects.</string>
 
     <string name="about_citrus3">All our sources are publicly available on our GitHub. We have a Google+ Community, where you can do community stuff. (Just kidding, we got builds over there and a feature-wish bucket too :P) Thank You &amp; Enjoy your stay :)</string>
+
+    <!-- Developers -->
+    <string name="developer">Developer</string>
+    <string name="dev1_title">Adarsh MR</string>
+    <string name="dev1_summary">Founder/Developer</string>
+    <string name="dev1_url">https://plus.google.com/+AdarshMR1</string>
+    <string name="dev2_title">Rohit Poroli</string>
+    <string name="dev2_summary">Co-Founder/Developer</string>
+    <string name="dev2_url">https://plus.google.com/+RohitPoroli</string>
+
+    <!-- Maintainers -->
+    <string name="maintainer">Maintainer</string>
+    <string name="maintainer1_title">Aditya Garg</string>
+    <string name="maintainer1_summary">Kenzo/Oneplus3</string>
+    <string name="maintainer2_title">Amardeep Arora</string>
+    <string name="maintainer2_summary">Bacon</string>
+    <string name="maintainer3_title">Rakesh Batra</string>
+    <string name="maintainer3_summary">Tomato</string>
+    <string name="maintainer4_title">Satyabrat Sahoo</string>
+    <string name="maintainer4_summary">Jalebi</string>
+
 </resources>
