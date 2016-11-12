@@ -48,7 +48,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Satyabrat"
+                    android:text="Aditya Garg"
                     android:layout_marginLeft="10dp"
                     android:textStyle="bold"
                     android:textSize="20sp"
@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Jalebi Maintainer"
+                    android:text="Kenzo/OnePlus3 Maintainer"
                     android:layout_marginLeft="10dp"
                     android:textStyle="italic"
                     android:textSize="18sp"
@@ -104,7 +104,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Satyabrat"
+                        android:text="Amardeep Arora"
                         android:layout_marginLeft="10dp"
                         android:textStyle="bold"
                         android:textSize="20sp"
@@ -115,7 +115,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Jalebi Maintainer"
+                        android:text="Bacon Maintainer"
                         android:layout_marginLeft="10dp"
                         android:textStyle="italic"
                         android:textSize="18sp"
@@ -159,7 +159,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Satyabrat"
+                        android:text="Rakesh Batra"
                         android:layout_marginLeft="10dp"
                         android:textStyle="bold"
                         android:textSize="20sp"
@@ -170,7 +170,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Jalebi Maintainer"
+                        android:text="Tomato Maintainer"
                         android:layout_marginLeft="10dp"
                         android:textStyle="italic"
                         android:textSize="18sp"
@@ -214,282 +214,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Satyabrat"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:gravity="center_horizontal"
-                        android:layout_gravity="center_vertical" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="Jalebi Maintainer"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="italic"
-                        android:textSize="18sp"
-                        android:layout_gravity="center_vertical" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cards_margin"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="launchCitrus"
-            android:padding="@dimen/cards_padding"
-            card_view:cardBackgroundColor="@color/cardsbg"
-            card_view:cardElevation="@dimen/cards_elevation">
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/devs_phone"
-                    android:scaleType="fitCenter"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"/>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Satyabrat"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:gravity="center_horizontal"
-                        android:layout_gravity="center_vertical" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="Jalebi Maintainer"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="italic"
-                        android:textSize="18sp"
-                        android:layout_gravity="center_vertical" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cards_margin"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="launchCitrus"
-            android:padding="@dimen/cards_padding"
-            card_view:cardBackgroundColor="@color/cardsbg"
-            card_view:cardElevation="@dimen/cards_elevation">
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/devs_phone"
-                    android:scaleType="fitCenter"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"/>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Satyabrat"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:gravity="center_horizontal"
-                        android:layout_gravity="center_vertical" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="Jalebi Maintainer"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="italic"
-                        android:textSize="18sp"
-                        android:layout_gravity="center_vertical" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cards_margin"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="launchCitrus"
-            android:padding="@dimen/cards_padding"
-            card_view:cardBackgroundColor="@color/cardsbg"
-            card_view:cardElevation="@dimen/cards_elevation">
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/devs_phone"
-                    android:scaleType="fitCenter"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"/>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Satyabrat"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:gravity="center_horizontal"
-                        android:layout_gravity="center_vertical" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="Jalebi Maintainer"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="italic"
-                        android:textSize="18sp"
-                        android:layout_gravity="center_vertical" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cards_margin"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="launchCitrus"
-            android:padding="@dimen/cards_padding"
-            card_view:cardBackgroundColor="@color/cardsbg"
-            card_view:cardElevation="@dimen/cards_elevation">
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/devs_phone"
-                    android:scaleType="fitCenter"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"/>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Satyabrat"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:gravity="center_horizontal"
-                        android:layout_gravity="center_vertical" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="Jalebi Maintainer"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="italic"
-                        android:textSize="18sp"
-                        android:layout_gravity="center_vertical" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cards_margin"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="launchCitrus"
-            android:padding="@dimen/cards_padding"
-            card_view:cardBackgroundColor="@color/cardsbg"
-            card_view:cardElevation="@dimen/cards_elevation">
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/devs_phone"
-                    android:scaleType="fitCenter"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"/>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Satyabrat"
+                        android:text="Satyabrat Sahoo"
                         android:layout_marginLeft="10dp"
                         android:textStyle="bold"
                         android:textSize="20sp"
