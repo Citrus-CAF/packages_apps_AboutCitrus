@@ -250,7 +250,7 @@
                             android:lineSpacingMultiplier="1.1"
                             android:paddingLeft="@dimen/content_inset"
                             android:paddingRight="@dimen/content_inset"
-                            android:text="@string/developer"
+                            android:text="@string/co-founder"
                             android:textColor="?android:textColorSecondary"
                             android:textSize="@dimen/content_text_size" />
 
