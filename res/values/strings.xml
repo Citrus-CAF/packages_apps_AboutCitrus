@@ -31,7 +31,9 @@
     <string name="maintainer2_summary">Bacon</string>
     <string name="maintainer3_title">Rakesh Batra</string>
     <string name="maintainer3_summary">Tomato</string>
-    <string name="maintainer4_title">Satyabrat Sahoo</string>
-    <string name="maintainer4_summary">Jalebi</string>
+    <string name="maintainer4_title">Sanjay Varun</string>
+    <string name="maintainer4_summary">Titan</string>
+    <string name="maintainer5_title">Satyabrat Sahoo</string>
+    <string name="maintainer5_summary">Jalebi</string>
 
 </resources>
