@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AboutCitrus</string>
+    <string name="app_name">About Citrus</string>
     <string name="action_channel">Channel</string>
     <string name="action_wishbucket">Wish Bucket</string>
     <string name="action_bugreport">Bug Report</string>
@@ -26,7 +26,7 @@
     <!-- Maintainers -->
     <string name="maintainer">Maintainer</string>
     <string name="maintainer1_title">Aditya Garg</string>
-    <string name="maintainer1_summary">Kenzo/Oneplus3</string>
+    <string name="maintainer1_summary">Kenzo/OnePlus3</string>
     <string name="maintainer2_title">Amardeep Arora</string>
     <string name="maintainer2_summary">Bacon</string>
     <string name="maintainer3_title">Rakesh Batra</string>
