@@ -13,7 +13,7 @@ LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-appcompat
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-cardview
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-design
 
-LOCAL_SRC_FILES := $(call all-java-files-under, app/src/main/java)
+LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
     frameworks/support/v7/appcompat/res \
     frameworks/support/v7/cardview/res \
