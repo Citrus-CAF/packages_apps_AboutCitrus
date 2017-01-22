@@ -35,5 +35,8 @@
     <string name="titan_maintainer_summary">Titan</string>
     <string name="jalebi_maintainer_title">Harsh Shandilya</string>
     <string name="jalebi_maintainer_summary">Jalebi</string>
-
+    <string name="maintainer5_summary">Jalebi</string>
+    <string name="lettuce_maintainer_title">Aashish Toshniwal</string>
+    <string name="lettuce_maintainer_summary">Lettuce</string>
+    
 </resources>
