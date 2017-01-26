@@ -24,16 +24,16 @@
     <string name="dev2_url">https://plus.google.com/+RohitPoroli</string>
 
     <!-- Maintainers -->
-    <string name="maintainer">Maintainer</string>
-    <string name="maintainer1_title">Aditya Garg</string>
-    <string name="maintainer1_summary">Kenzo/OnePlus3</string>
-    <string name="maintainer2_title">Amardeep Arora</string>
-    <string name="maintainer2_summary">Bacon</string>
-    <string name="maintainer3_title">Rakesh Batra</string>
-    <string name="maintainer3_summary">Tomato</string>
-    <string name="maintainer4_title">Sanjay Varun</string>
-    <string name="maintainer4_summary">Titan</string>
-    <string name="maintainer5_title">Satyabrat Sahoo</string>
-    <string name="maintainer5_summary">Jalebi</string>
+    <string name="maintainer_title">Maintainer</string>
+    <string name="kenzo-oneplus3_maintainer_title">Aditya Garg</string>
+    <string name="kenzo-oneplus3_maintainer_summary">Kenzo/OnePlus3</string>
+    <string name="bacon_maintainer_title">Amardeep Arora</string>
+    <string name="bacon_maintainer_summary">Bacon</string>
+    <string name="tomato_maintainer_title">Rakesh Batra</string>
+    <string name="tomato_maintainer_summary">Tomato</string>
+    <string name="titan_maintainer_title">Sanjay Varun</string>
+    <string name="titan_maintainer_summary">Titan</string>
+    <string name="jalebi_maintainer_title">Satyabrat Sahoo</string>
+    <string name="jalebi_maintainer_summary">Jalebi</string>
 
 </resources>
