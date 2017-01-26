@@ -25,8 +25,8 @@
 
     <!-- Maintainers -->
     <string name="maintainer_title">Maintainer</string>
-    <string name="kenzo-oneplus3_maintainer_title">Aditya Garg</string>
-    <string name="kenzo-oneplus3_maintainer_summary">Kenzo/OnePlus3</string>
+    <string name="kenzo_oneplus3_maintainer_title">Aditya Garg</string>
+    <string name="kenzo_oneplus3_maintainer_summary">Kenzo/OnePlus3</string>
     <string name="bacon_maintainer_title">Amardeep Arora</string>
     <string name="bacon_maintainer_summary">Bacon</string>
     <string name="tomato_maintainer_title">Rakesh Batra</string>
