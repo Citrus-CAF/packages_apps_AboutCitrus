@@ -1,6 +1,7 @@
 package com.citrus.aboutcitrus;
 
 import android.content.Intent;
+import android.content.ActivityNotFoundException;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -36,7 +37,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(getString(R.string.citrus_github)));
-                startActivity(intent);
+                try {
+                    startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    Snackbar.make(view,"No browser installed? ಠ_ಠ", Snackbar.LENGTH_LONG).show();
+                }
             }
         });
     }
