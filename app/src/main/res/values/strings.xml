@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AboutCitrus</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="about_citrus">Citrus-CAF, unlike the name suggests, was initially based off CyanogenMod in the early days of its inception, we even had another name at that point. Later, taking into consideration feedbacks of the very first slew of testers and carefully studying the needs and demands of our users, we rebased the project to Code Aurora Sources, more commonly known as CAF. Time went by and Nougat released, and we decided that it was time, Citrus-CAF had to see the daylight. We rebased everything to the brand spanking Nougat. Realising the potential of CAF tags, and how each altered the device performance on different SoCs, we decided to keep our sources independent for each chipset on our GitHub. The Xiaomi Redmi Note 3 was the first device to get the full fledged taste of our Tangy Nougat. In the beginning, it was just two people behind , but in time, a lot of people joined us, each giving their own contribution.</string>
+
+    <string name="about_citrus2">Citrus-CAF was built to create a never-before combination of customization &amp; performance, incorporating the features that our community expects.</string>
+
+    <string name="about_citrus3">All our sources are publicly available on our GitHub. We have a Google+ Community, where you can do community stuff. (Just kidding, we got builds over there and a feature-wish bucket too :P) Thank You &amp; Enjoy your stay :)</string>
+
+    <string name="maintainer1_title">Aditya Garg</string>
+    <string name="maintainer1_summary">Kenzo/OnePlus3</string>
+</resources>
