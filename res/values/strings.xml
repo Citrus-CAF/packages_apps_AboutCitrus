@@ -38,5 +38,7 @@
     <string name="maintainer5_summary">Jalebi</string>
     <string name="lettuce_maintainer_title">Aashish Toshniwal</string>
     <string name="lettuce_maintainer_summary">Lettuce</string>
-    
+    <string name="OnePlus2_maintainer_title">Subham Padhi</string>
+    <string name="OnePlus2_maintainer_summary">OnePlus2</string> 
+   
 </resources>
