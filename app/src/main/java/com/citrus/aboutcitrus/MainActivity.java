@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_wishbucket) {
-            String addresses[] = {"cool.leo.aditya@gmail.com", "aranha.joshwin@gmail.com", "satyabrat.me@gmail.com"};
+            String addresses[] = {"cool.leo.aditya@gmail.com", "rohitp4all@gmail.com", "satyabrat.me@gmail.com"};
             Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                     "mailto", "Adarshmr1998@gmail.com", null));
             emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
