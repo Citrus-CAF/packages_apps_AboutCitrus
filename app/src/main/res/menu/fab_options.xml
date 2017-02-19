@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/faboptions_gplus"
+        android:icon="@drawable/googleplus"
+        android:title="@string/fab_googleplus" />
+
+    <item
+        android:id="@+id/faboptions_tg"
+        android:icon="@drawable/telegram"
+        android:title="@string/fab_telegram" />
+
+    <item
+        android:id="@+id/faboptions_git"
+        android:icon="@drawable/github"
+        android:title="@string/fab_github" />
+
+    <item
+        android:id="@+id/faboptions_log"
+        android:icon="@drawable/logcat"
+        android:title="@string/fab_logcat" />
+</menu>

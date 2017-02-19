@@ -1,52 +1,31 @@
 package com.citrus.aboutcitrus;
 
-import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Switch;
-import android.widget.TextView;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.joaquimley.faboptions.FabOptions;
+import com.sdsmdg.tastytoast.TastyToast;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
     private ViewPager mViewPager;
 
     @Override
@@ -67,17 +46,57 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        TastyToast.makeText(getApplicationContext(), "Welcome to AboutCitrus Application", TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
+
+        FabOptions fabOptions = (FabOptions) findViewById(R.id.fab_options);
+        fabOptions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                switch (view.getId()) {
+                    case R.id.faboptions_gplus: {
+                        Snackbar.make(view, "Opening Citrus Google+ Community", Snackbar.LENGTH_LONG).show();
+                        Intent intent = new Intent();
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(getString(R.string.citrus_url)));
+                        startActivity(intent);
+                        break;
+                    }
+                    case R.id.faboptions_tg: {
+                        Snackbar.make(view, "Opening Telegram Channel for Citrus-CAF", Snackbar.LENGTH_LONG).show();
+                        Intent intent = new Intent();
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(getString(R.string.citrus_channel)));
+                        startActivity(intent);
+                        break;
+                    }
+                    case R.id.faboptions_git: {
+                        Snackbar.make(view, "Opening Citrus Source Github", Snackbar.LENGTH_LONG).show();
+                        Intent intent = new Intent();
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(getString(R.string.citrus_github)));
+                        startActivity(intent);
+                        break;
+                    }
+                    case R.id.faboptions_log: {
+                        boolean appPresent = appCheck("com.nolanlawson.logcat");
+
+                        if (appPresent) {
+                            Snackbar.make(view, "Opening Logcat Reader", Snackbar.LENGTH_LONG).show();
+                            Intent intent = new Intent("com.nolanlawson.logcat.intents.LAUNCH");
+                            startActivity(intent);
+                        } else {
+                            Intent i = new Intent(android.content.Intent.ACTION_VIEW);
+                            i.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.nolanlawson.logcat"));
+                            startActivity(i);
+                        }
+
+                    }
+                    default:
+                }
             }
         });
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -93,32 +112,39 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_wishbucket) {
+            String addresses[] = {"cool.leo.aditya@gmail.com", "aranha.joshwin@gmail.com", "satyabrat.me@gmail.com"};
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                    "mailto", "Adarshmr1998@gmail.com", null));
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Citrus-CAF: WishBucket");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "Your Wish");
+            startActivity(Intent.createChooser(emailIntent, "Send Email"));
         }
 
         return super.onOptionsItemSelected(item);
     }
 
+    private boolean appCheck(String uri) {
+        PackageManager pm = getPackageManager();
+        boolean app_present;
+        try {
+            pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
+            app_present = true;
+        } catch (PackageManager.NameNotFoundException e) {
+            app_present = false;
+        }
+        return app_present;
+    }
+
     //#1
     public static class AboutFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        private final String LOG_TAG = AboutFragment.class.getSimpleName();
 
-        private ArrayAdapter<String> listAdapter;
+        private static final String ARG_SECTION_NUMBER = "section_number";
 
         public AboutFragment() {
         }
 
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
         public static AboutFragment newInstance(int sectionNumber) {
             AboutFragment fragment = new AboutFragment();
             Bundle args = new Bundle();
@@ -130,31 +156,19 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-
             View rootView = inflater.inflate(R.layout.content_about, container, false);
-
             return rootView;
         }
     }
 
     //#2
     public static class TCFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        private final String LOG_TAG = TCFragment.class.getSimpleName();
 
-        private ArrayAdapter<String> listAdapter;
+        private static final String ARG_SECTION_NUMBER = "section_number";
 
         public TCFragment() {
         }
 
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
         public static TCFragment newInstance(int sectionNumber) {
             TCFragment fragment = new TCFragment();
             Bundle args = new Bundle();
@@ -169,54 +183,40 @@ public class MainActivity extends AppCompatActivity {
 
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-            String listArray1[] = new String[] {
+            String listArray1[] = new String[]{
                     "Adarsh MR",
                     "Rohit Poroli"
             };
 
-            String listArray2[] = new String[] {
+            String listArray2[] = new String[]{
                     "Founder/Developer",
                     "Co-Founder/Developer"
             };
 
-            int bgimageArray[] = new int[] {
+            int bgimageArray[] = new int[]{
                     R.drawable.dev1_bg,
                     R.drawable.dev2_bg
             };
 
-            int imageArray[] = new int[] {
+            int imageArray[] = new int[]{
                     R.drawable.dev1,
                     R.drawable.dev2
             };
 
-            int pos = getArguments().getInt(ARG_SECTION_NUMBER);
-            Log.d(LOG_TAG, Integer.toString(pos));
-
             ListView listView = (ListView) rootView.findViewById(R.id.list);
-            listView.setAdapter(new TCAdapter(getActivity() , listArray1, listArray2, bgimageArray, imageArray));
-            Log.d(LOG_TAG,"DONE");
+            listView.setAdapter(new TCAdapter(getActivity(), listArray1, listArray2, bgimageArray, imageArray));
             return rootView;
         }
     }
 
     //#3
     public static class MaintainerFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        private final String LOG_TAG = MaintainerFragment.class.getSimpleName();
 
-        private ArrayAdapter<String> listAdapter;
+        private static final String ARG_SECTION_NUMBER = "section_number";
 
         public MaintainerFragment() {
         }
 
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
         public static MaintainerFragment newInstance(int sectionNumber) {
             MaintainerFragment fragment = new MaintainerFragment();
             Bundle args = new Bundle();
@@ -231,40 +231,32 @@ public class MainActivity extends AppCompatActivity {
 
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-            String listArray1[] = new String[] {
-                    "L",
-                    "O",
-                    "L",
-                    "DO",
-                    "K",
-                    "F",
-                    "G"
+            String listArray1[] = new String[]{
+                    "Aditya Garg",
+                    "AG",
+                    "PhenomX1998",
+                    "Phenom",
+                    "Phenol",
+                    "Phenyl",
+                    "Dildo"
             };
 
-            String listArray2[] = new String[] {
-                    "L",
-                    "O",
-                    "L",
-                    "DO",
-                    "K",
-                    "F",
-                    "G"
+            String listArray2[] = new String[]{
+                    "OnePlusOne",
+                    "OnePlus2",
+                    "OnePlus3",
+                    "Onyx",
+                    "RendiNude3",
+                    "Kencho",
+                    "Sweg"
             };
-
-            int pos = getArguments().getInt(ARG_SECTION_NUMBER);
-            Log.d(LOG_TAG, Integer.toString(pos));
 
             ListView listView = (ListView) rootView.findViewById(R.id.list);
-            listView.setAdapter(new MaintainerAdapter(getActivity() , listArray1, listArray2));
-            Log.d(LOG_TAG,"DONE");
+            listView.setAdapter(new MaintainerAdapter(getActivity(), listArray1, listArray2));
             return rootView;
         }
     }
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);

@@ -4,6 +4,5 @@
     <color name="colorPrimaryDark">#1f6768</color>
     <color name="colorAccent">#ffff</color>
 
-    <color name="cardsbg">#ffffff</color>
-    <color name="dark_grey">#4d4d4d</color>
+    <color name="darkGrey">#4F4F4F</color>
 </resources>
