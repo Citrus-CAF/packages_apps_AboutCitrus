@@ -205,6 +205,7 @@ public class MainActivity extends AppCompatActivity {
 
             ListView listView = (ListView) rootView.findViewById(R.id.list);
             listView.setAdapter(new TCAdapter(getActivity(), listArray1, listArray2, bgimageArray, imageArray));
+            listView.setNestedScrollingEnabled(true);
             return rootView;
         }
     }
@@ -253,6 +254,7 @@ public class MainActivity extends AppCompatActivity {
 
             ListView listView = (ListView) rootView.findViewById(R.id.list);
             listView.setAdapter(new MaintainerAdapter(getActivity(), listArray1, listArray2));
+            listView.setNestedScrollingEnabled(true);
             return rootView;
         }
     }
