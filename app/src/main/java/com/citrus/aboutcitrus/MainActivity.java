@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         // TastyToast.makeText(getApplicationContext(), "Welcome to AboutCitrus Application", TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
         Toast.makeText(getApplicationContext(), "Welcome to Citrus-CAF", Toast.LENGTH_LONG).show();
-        
+
         FabOptions fabOptions = (FabOptions) findViewById(R.id.fab_options);
         fabOptions.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -186,22 +186,32 @@ public class MainActivity extends AppCompatActivity {
 
             String listArray1[] = new String[]{
                     "Adarsh MR",
-                    "Rohit Poroli"
+                    "Rohit Poroli",
+                    "Satyabrat Sahoo",
+                    "Aditya Garg"
+
             };
 
             String listArray2[] = new String[]{
                     "Founder/Developer",
-                    "Co-Founder/Developer"
+                    "Co-Founder/Developer",
+                    "App Developer",
+                    "Developer"
+
             };
 
             int bgimageArray[] = new int[]{
-                    R.drawable.dev1_bg,
-                    R.drawable.dev2_bg
+                    R.drawable.adarsh_bg,
+                    R.drawable.rohit_bg,
+                    R.drawable.satyabrat_bg,
+                    R.drawable.aditya_bg
             };
 
             int imageArray[] = new int[]{
-                    R.drawable.dev1,
-                    R.drawable.dev2
+                    R.drawable.adarsh,
+                    R.drawable.rohit,
+                    R.drawable.satyabrat,
+                    R.drawable.aditya
             };
 
             ListView listView = (ListView) rootView.findViewById(R.id.list);
@@ -234,23 +244,29 @@ public class MainActivity extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
             String listArray1[] = new String[]{
+                    "Aashish Toshniwal",
                     "Aditya Garg",
-                    "AG",
-                    "PhenomX1998",
-                    "Phenom",
-                    "Phenol",
-                    "Phenyl",
-                    "Dildo"
+                    "Amardeep singh arora",
+                    "Hamza",
+                    "Harsh Shandilya",
+                    "Rahif",
+                    "Rakesh Batra",
+                    "Rohit Poroli",
+                    "Shubham",
+                    "Vedant Kamalshekar"
             };
 
             String listArray2[] = new String[]{
-                    "OnePlusOne",
-                    "OnePlus2",
-                    "OnePlus3",
-                    "Onyx",
-                    "RendiNude3",
-                    "Kencho",
-                    "Sweg"
+                    "Lettuce",
+                    "Oneplus3/Kenzo",
+                    "OnePlus One",
+                    "Otus",
+                    "Jalebi",
+                    "wt88047",
+                    "Tomato",
+                    "Rohit Poroli",
+                    "Oneplus2",
+                    "Armani"
             };
 
             ListView listView = (ListView) rootView.findViewById(R.id.list);

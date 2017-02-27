@@ -18,7 +18,6 @@ LOCAL_STATIC_JAVA_LIBRARIES +=android-support-v4
 LOCAL_SRC_FILES := $(call all-java-files-under, app/src/main/java faboptions/src/main/java )
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/app/src/main/res \
     $(LOCAL_PATH)/faboptions/src/main/res \
-    $(LOCAL_PATH)/tastytoast/src/main/res \
     frameworks/support/v7/appcompat/res \
     frameworks/support/v7/cardview/res \
     frameworks/support/design/res
