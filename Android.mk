@@ -17,14 +17,14 @@ LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := rebound:app/libs/facebook-rebound.jar
 LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES += tastytoast:app/libs/tastytoast.jar
 LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES += faboptions:app/libs/faboptions.jar
 
-LOCAL_SRC_FILES := $(call all-java-files-under, app/src/main)
+LOCAL_SRC_FILES := $(call all-java-files-under, app/src/main/res)
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/app/src/main/res \
     frameworks/support/v7/appcompat/res \
     frameworks/support/v7/cardview/res \
     frameworks/support/design/res
 
 LOCAL_AAPT_FLAGS := --auto-add-overlay
-LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.appcompat:android.support.v7.cardview:android.support.design
+LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.appcompat:android.support.v7.cardview:android.support.design:com.joaquimley.faboptions:com.sdsmdg.tastytoast
 
 include $(BUILD_PACKAGE)
 

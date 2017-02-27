@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/lib/com.joaquimley.faboptions"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
@@ -60,8 +61,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:background_color="@color/colorPrimary"
-        app:button_menu="@menu/fab_options"
-        app:fab_color="@color/colorPrimaryDark" />
+        fab:background_color="@color/colorPrimary"
+        fab:button_menu="@menu/fab_options"
+        fab:fab_color="@color/colorPrimaryDark" />
 
 </android.support.design.widget.CoordinatorLayout>
