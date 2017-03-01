@@ -63,6 +63,7 @@
         android:layout_gravity="bottom"
         app:background_color="@color/colorPrimary"
         app:button_menu="@menu/fab_options"
+        app:layout_behavior="com.citrus.aboutcitrus.FabScrollBehavior"
         app:fab_color="@color/colorPrimaryDark" />
 
 </android.support.design.widget.CoordinatorLayout>
