@@ -275,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
                     "Jalebi",
                     "wt88047",
                     "Tomato",
-                    "Rohit Poroli",
+                    "Onyx",
                     "Oneplus2",
                     "Armani"
             };
