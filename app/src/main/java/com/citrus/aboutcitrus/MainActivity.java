@@ -1,7 +1,9 @@
 package com.citrus.aboutcitrus;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.TypedArray;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.Snackbar;
@@ -136,6 +138,15 @@ public class MainActivity extends AppCompatActivity {
             app_present = false;
         }
         return app_present;
+    }
+
+    public static int getToolbarHeight(Context context) {
+        final TypedArray styledAttributes = context.getTheme().obtainStyledAttributes(
+                new int[]{R.attr.actionBarSize});
+        int toolbarHeight = (int) styledAttributes.getDimension(0, 0);
+        styledAttributes.recycle();
+
+        return toolbarHeight;
     }
 
     //#1
