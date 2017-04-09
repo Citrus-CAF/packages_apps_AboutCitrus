@@ -48,9 +48,6 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        // TastyToast.makeText(getApplicationContext(), "Welcome to AboutCitrus Application", TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
-        Toast.makeText(getApplicationContext(), "Welcome to Citrus-CAF", Toast.LENGTH_LONG).show();
-
         FabOptions fabOptions = (FabOptions) findViewById(R.id.fab_options);
         fabOptions.setOnClickListener(new View.OnClickListener() {
             @Override
