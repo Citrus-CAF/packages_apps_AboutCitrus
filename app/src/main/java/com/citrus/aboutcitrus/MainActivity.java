@@ -261,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
                     "Rahif",
                     "Rakesh Batra",
                     "Rohit Poroli",
-                    "Shubham",
+                    "Subham Padhi",
                     "Vedant Kamalshekar"
             };
 
@@ -275,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
                     "wt88047",
                     "Tomato",
                     "Onyx",
-                    "Oneplus2",
+                    "OnePlus2",
                     "Armani"
             };
 
