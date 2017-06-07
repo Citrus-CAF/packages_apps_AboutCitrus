@@ -256,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
                     "Aditya Garg",
                     "Amardeep singh arora",
                     "Davide Garberi",
-                    "Hamza",
+                    "Hamza Badar",
                     "Harsh Shandilya",
                     "Rahif",
                     "Rakesh Batra",
