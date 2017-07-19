@@ -196,7 +196,8 @@ public class MainActivity extends AppCompatActivity {
                     "Adarsh MR",
                     "Rohit Poroli",
                     "Satyabrat Sahoo",
-                    "Aditya Garg"
+                    "Aditya Garg",
+                    "Rock Kellan"
 
             };
 
@@ -204,7 +205,8 @@ public class MainActivity extends AppCompatActivity {
                     "Founder/Developer",
                     "Co-Founder/Developer",
                     "App Developer",
-                    "Developer"
+                    "Developer",
+                    "Designer"
 
             };
 
@@ -212,14 +214,16 @@ public class MainActivity extends AppCompatActivity {
                     R.drawable.adarsh_bg,
                     R.drawable.rohit_bg,
                     R.drawable.satyabrat_bg,
-                    R.drawable.aditya_bg
+                    R.drawable.aditya_bg,
+                    R.drawable.kellan_bg
             };
 
             int imageArray[] = new int[]{
                     R.drawable.adarsh,
                     R.drawable.rohit,
                     R.drawable.satyabrat,
-                    R.drawable.aditya
+                    R.drawable.aditya,
+                    R.drawable.kellan
             };
 
             ListView listView = (ListView) rootView.findViewById(R.id.list);
