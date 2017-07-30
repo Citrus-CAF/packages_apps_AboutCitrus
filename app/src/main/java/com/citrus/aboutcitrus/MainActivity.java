@@ -258,29 +258,21 @@ public class MainActivity extends AppCompatActivity {
             String listArray1[] = new String[]{
                     "Aashish Toshniwal",
                     "Aditya Garg",
-                    "Amardeep singh arora",
                     "Davide Garberi",
-                    "Hamza",
                     "Harsh Shandilya",
                     "Rahif",
-                    "Rakesh Batra",
                     "Rohit Poroli",
-                    "Subham Padhi",
-                    "Vedant Kamalshekar"
+                    "Romil P",
             };
 
             String listArray2[] = new String[]{
                     "Lettuce",
-                    "Oneplus3/Kenzo",
-                    "OnePlus One",
+                    "Oneplus3/Kenzo/Gemini/Hydrogen",
                     "Zuk z2/Lenovo Z2 Plus",
-                    "Otus",
                     "Jalebi",
                     "wt88047",
-                    "Tomato",
-                    "Onyx",
-                    "OnePlus2",
-                    "Armani"
+                    "Mido",
+                    "OnePlus One",
             };
 
             ListView listView = (ListView) rootView.findViewById(R.id.list);
