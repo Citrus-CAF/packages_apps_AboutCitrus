@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.citrus.aboutcitrus"
         minSdkVersion 23
-        targetSdkVersion 25
-        versionCode 2
-        versionName "2.0"
+        targetSdkVersion 26
+        versionCode 3
+        versionName "3.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -22,12 +22,22 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support'
+        exclude group: 'com.google.code.findbugs'
+        exclude module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.1.1'
-    compile 'com.android.support:cardview-v7:25.1.1'
-    compile 'com.android.support:design:25.1.1'
-    compile 'com.github.joaquimley:faboptions:1.1.2'
-    compile 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.github.joaquimley:faboptions:1.1.2'
+    implementation 'com.nononsenseapps:filepicker:4.1.0'
+    implementation 'eu.chainfire:libsuperuser:1.0.0+'
+    implementation 'com.google.android.gms:play-services-identity:11.4.2'
+    implementation 'com.google.android.gms:play-services-auth:11.4.2'
+    implementation 'com.google.api-client:google-api-client-android:1.22.0'
+    implementation 'com.google.apis:google-api-services-gmail:v1-rev44-1.22.0'
+    implementation files('libs/mail.jar')
+    implementation files('libs/activation.jar')
+    implementation files('libs/additionnal.jar')
     testCompile 'junit:junit:4.12'
 }

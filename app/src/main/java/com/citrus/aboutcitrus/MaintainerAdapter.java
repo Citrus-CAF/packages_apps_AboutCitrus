@@ -1,58 +1,65 @@
 package com.citrus.aboutcitrus;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MaintainerAdapter extends BaseAdapter {
+public class MaintainerAdapter extends RecyclerView.Adapter<MaintainerAdapter.ViewHolder> {
 
-    String[] title;
-    String[] summary;
-    Context context;
+    private String[] maintainerName, maintainerDesc, uriArray;
+    private Context context;
     private static LayoutInflater inflater = null;
 
-    public MaintainerAdapter(FragmentActivity Activity, String[] titleList, String[] summaryList) {
-        title = titleList;
-        summary = summaryList;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView maintainerName, maintainerDesc;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            maintainerName = itemView.findViewById(R.id.maintainerName);
+            maintainerDesc = itemView.findViewById(R.id.maintainerDesc);
+        }
+    }
+
+    public MaintainerAdapter(FragmentActivity Activity, String[] maintainerName, String[] maintainerDesc, String[] uriArray) {
+        this.maintainerName = maintainerName;
+        this.maintainerDesc = maintainerDesc;
+        this.uriArray = uriArray;
         context = Activity;
-        inflater = (LayoutInflater) context.
-                getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
-    public int getCount() {
-        return title.length;
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = inflater.inflate(R.layout.maintainercard_item, parent, false);
+        return new ViewHolder(itemView);
     }
 
     @Override
-    public Object getItem(int position) {
-        return position;
+    public void onBindViewHolder(ViewHolder holder, final int position) {
+        holder.maintainerName.setText(maintainerName[position]);
+        holder.maintainerDesc.setText(maintainerDesc[position]);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!uriArray[position].equals(""))
+                    context.startActivity(new Intent(android.content.Intent.ACTION_VIEW)
+                            .setData(Uri.parse(uriArray[position])));
+                else
+                    Toast.makeText(context.getApplicationContext(), "Nae Nae. Not Yet!", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
-    public long getItemId(int position) {
-        return position;
+    public int getItemCount() {
+        return maintainerName.length;
     }
-
-    public class Holder {
-        TextView tv1;
-        TextView tv2;
-    }
-
-    @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
-        Holder holder = new Holder();
-        View rowView;
-        rowView = inflater.inflate(R.layout.list_item, null);
-        holder.tv1 = (TextView) rowView.findViewById(R.id.textView1);
-        holder.tv2 = (TextView) rowView.findViewById(R.id.textView2);
-        holder.tv1.setText(title[position]);
-        holder.tv2.setText(summary[position]);
-        return rowView;
-    }
-
 }

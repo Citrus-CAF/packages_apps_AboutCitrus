@@ -12,7 +12,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/cards_margin"
-        android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
         android:padding="@dimen/cards_padding"
         card_view:cardBackgroundColor="@color/white"
@@ -30,7 +29,7 @@
                 tools:ignore="UnusedAttribute">
 
                 <ImageView
-                    android:id="@+id/bgimage"
+                    android:id="@+id/tcMemberBg"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:scaleType="centerCrop"
@@ -43,8 +42,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <com.citrus.aboutcitrus.RoundedImageView
-                        android:id="@+id/cardimage"
+                    <com.citrus.aboutcitrus.Helpers.RoundedImageView
+                        android:id="@+id/tcMemberDp"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:layout_gravity="center_horizontal"
@@ -56,7 +55,7 @@
                         tools:ignore="ContentDescription" />
 
                     <TextView
-                        android:id="@+id/cardtitle"
+                        android:id="@+id/tcMemberName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -68,7 +67,7 @@
                         android:textSize="@dimen/header_text_size" />
 
                     <TextView
-                        android:id="@+id/carddescription"
+                        android:id="@+id/tcMemberDesc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
