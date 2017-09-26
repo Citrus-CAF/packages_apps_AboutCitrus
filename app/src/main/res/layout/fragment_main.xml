@@ -7,10 +7,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.citrus.aboutcitrus.MainActivity$AboutFragment">
 
-    <ListView
-        android:id="@+id/list"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tcListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:divider="@null"
-        android:dividerHeight="0dp" />
+        android:layout_height="wrap_content"/>
+
 </android.support.v4.widget.NestedScrollView>
