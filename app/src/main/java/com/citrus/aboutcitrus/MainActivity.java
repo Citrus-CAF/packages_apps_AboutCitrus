@@ -264,6 +264,7 @@ public class MainActivity extends AppCompatActivity {
                     "Rahif",
                     "Rohit Poroli",
                     "Romil P",
+                    "Subham Padhi",
             };
 
             String listArray2[] = new String[]{
@@ -275,6 +276,7 @@ public class MainActivity extends AppCompatActivity {
                     "wt88047",
                     "Mido",
                     "OnePlus One",
+                    "Lenovo P2 (Kuntao)",
             };
 
             ListView listView = (ListView) rootView.findViewById(R.id.list);
