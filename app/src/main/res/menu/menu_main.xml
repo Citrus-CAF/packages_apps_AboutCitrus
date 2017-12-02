@@ -5,6 +5,7 @@
     <item
         android:id="@+id/action_wishbucket"
         android:orderInCategory="100"
+        android:icon="@drawable/ic_message_white_18dp"
         android:title="@string/action_wishbucket"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 </menu>
