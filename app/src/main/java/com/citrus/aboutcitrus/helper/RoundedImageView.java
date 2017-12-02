@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.citrus.aboutcitrus.Helpers;
+package com.citrus.aboutcitrus.helper;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -39,16 +39,15 @@ import com.citrus.aboutcitrus.R;
 @SuppressWarnings("UnusedDeclaration")
 public class RoundedImageView extends ImageView {
 
+    public static final String TAG = "RoundedImageView";
+    public static final float DEFAULT_RADIUS = 0f;
+    public static final float DEFAULT_BORDER_WIDTH = 0f;
+    public static final Shader.TileMode DEFAULT_TILE_MODE = Shader.TileMode.CLAMP;
     // Constants for tile mode attributes
     private static final int TILE_MODE_UNDEFINED = -2;
     private static final int TILE_MODE_CLAMP = 0;
     private static final int TILE_MODE_REPEAT = 1;
     private static final int TILE_MODE_MIRROR = 2;
-
-    public static final String TAG = "RoundedImageView";
-    public static final float DEFAULT_RADIUS = 0f;
-    public static final float DEFAULT_BORDER_WIDTH = 0f;
-    public static final Shader.TileMode DEFAULT_TILE_MODE = Shader.TileMode.CLAMP;
     private static final ScaleType[] SCALE_TYPES = {
             ScaleType.MATRIX,
             ScaleType.FIT_XY,
@@ -362,6 +361,15 @@ public class RoundedImageView extends ImageView {
     }
 
     /**
+     * Set the corner radii of all corners in px.
+     *
+     * @param radius the radius to set.
+     */
+    public void setCornerRadius(float radius) {
+        setCornerRadius(radius, radius, radius, radius);
+    }
+
+    /**
      * @return the largest corner radius.
      */
     public float getMaxCornerRadius() {
@@ -400,15 +408,6 @@ public class RoundedImageView extends ImageView {
      */
     public void setCornerRadiusDimen(@Corner int corner, @DimenRes int resId) {
         setCornerRadius(corner, getResources().getDimensionPixelSize(resId));
-    }
-
-    /**
-     * Set the corner radii of all corners in px.
-     *
-     * @param radius the radius to set.
-     */
-    public void setCornerRadius(float radius) {
-        setCornerRadius(radius, radius, radius, radius);
     }
 
     /**
@@ -459,10 +458,6 @@ public class RoundedImageView extends ImageView {
         return mBorderWidth;
     }
 
-    public void setBorderWidth(@DimenRes int resId) {
-        setBorderWidth(getResources().getDimension(resId));
-    }
-
     public void setBorderWidth(float width) {
         if (mBorderWidth == width) {
             return;
@@ -474,17 +469,13 @@ public class RoundedImageView extends ImageView {
         invalidate();
     }
 
+    public void setBorderWidth(@DimenRes int resId) {
+        setBorderWidth(getResources().getDimension(resId));
+    }
+
     @ColorInt
     public int getBorderColor() {
         return mBorderColor.getDefaultColor();
-    }
-
-    public void setBorderColor(@ColorInt int color) {
-        setBorderColor(ColorStateList.valueOf(color));
-    }
-
-    public ColorStateList getBorderColors() {
-        return mBorderColor;
     }
 
     public void setBorderColor(ColorStateList colors) {
@@ -499,6 +490,14 @@ public class RoundedImageView extends ImageView {
         if (mBorderWidth > 0) {
             invalidate();
         }
+    }
+
+    public void setBorderColor(@ColorInt int color) {
+        setBorderColor(ColorStateList.valueOf(color));
+    }
+
+    public ColorStateList getBorderColors() {
+        return mBorderColor;
     }
 
     public boolean isOval() {

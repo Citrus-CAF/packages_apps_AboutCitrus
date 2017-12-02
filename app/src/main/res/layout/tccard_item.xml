@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <com.citrus.aboutcitrus.Helpers.RoundedImageView
+                    <com.citrus.aboutcitrus.helper.RoundedImageView
                         android:id="@+id/tcMemberDp"
                         android:layout_width="90dp"
                         android:layout_height="90dp"

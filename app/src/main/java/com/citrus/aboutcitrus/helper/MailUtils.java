@@ -1,4 +1,4 @@
-package com.citrus.aboutcitrus.Helpers;
+package com.citrus.aboutcitrus.helper;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

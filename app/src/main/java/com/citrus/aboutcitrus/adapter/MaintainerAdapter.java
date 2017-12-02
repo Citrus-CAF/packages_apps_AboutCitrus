@@ -1,4 +1,4 @@
-package com.citrus.aboutcitrus;
+package com.citrus.aboutcitrus.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,22 +11,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.citrus.aboutcitrus.R;
+
 public class MaintainerAdapter extends RecyclerView.Adapter<MaintainerAdapter.ViewHolder> {
 
+    private static LayoutInflater inflater = null;
     private String[] maintainerName, maintainerDesc, uriArray;
     private Context context;
-    private static LayoutInflater inflater = null;
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-
-        public TextView maintainerName, maintainerDesc;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-            maintainerName = itemView.findViewById(R.id.maintainerName);
-            maintainerDesc = itemView.findViewById(R.id.maintainerDesc);
-        }
-    }
 
     public MaintainerAdapter(FragmentActivity Activity, String[] maintainerName, String[] maintainerDesc, String[] uriArray) {
         this.maintainerName = maintainerName;
@@ -61,5 +52,16 @@ public class MaintainerAdapter extends RecyclerView.Adapter<MaintainerAdapter.Vi
     @Override
     public int getItemCount() {
         return maintainerName.length;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView maintainerName, maintainerDesc;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            maintainerName = itemView.findViewById(R.id.maintainerName);
+            maintainerDesc = itemView.findViewById(R.id.maintainerDesc);
+        }
     }
 }

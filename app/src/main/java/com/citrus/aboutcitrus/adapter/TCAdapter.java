@@ -1,4 +1,4 @@
-package com.citrus.aboutcitrus;
+package com.citrus.aboutcitrus.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,27 +12,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.citrus.aboutcitrus.R;
+
 public class TCAdapter extends RecyclerView.Adapter<TCAdapter.ViewHolder> {
 
+    private static LayoutInflater inflater = null;
     private String[] tcMemberName, tcMemberDesc, uriArray;
     private Context context;
     private int[] tcMemberDp, tcMemberBg;
-    private static LayoutInflater inflater = null;
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-
-        public TextView tcMemberName, tcMemberDesc;
-        public ImageView tcMemberDp, tcMemberBg;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-            tcMemberName = itemView.findViewById(R.id.tcMemberName);
-            tcMemberDesc = itemView.findViewById(R.id.tcMemberDesc);
-            tcMemberDp = itemView.findViewById(R.id.tcMemberDp);
-            tcMemberBg = itemView.findViewById(R.id.tcMemberBg);
-        }
-    }
-
 
     public TCAdapter(FragmentActivity Activity, String[] tcMemberName, String[] tcMemberDesc, int[] tcMemberDp, int[] tcMemberBg, String[] uriArray) {
         this.tcMemberName = tcMemberName;
@@ -71,5 +58,19 @@ public class TCAdapter extends RecyclerView.Adapter<TCAdapter.ViewHolder> {
     @Override
     public int getItemCount() {
         return tcMemberName.length;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView tcMemberName, tcMemberDesc;
+        public ImageView tcMemberDp, tcMemberBg;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            tcMemberName = itemView.findViewById(R.id.tcMemberName);
+            tcMemberDesc = itemView.findViewById(R.id.tcMemberDesc);
+            tcMemberDp = itemView.findViewById(R.id.tcMemberDp);
+            tcMemberBg = itemView.findViewById(R.id.tcMemberBg);
+        }
     }
 }

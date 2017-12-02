@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "833552328206",
+    "firebase_url": "https://aboutcitrus-89006.firebaseio.com",
+    "project_id": "aboutcitrus-89006",
+    "storage_bucket": "aboutcitrus-89006.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833552328206:android:33d409d558598d92",
+        "android_client_info": {
+          "package_name": "com.citrus.aboutcitrus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "833552328206-1h84tqop64lpi0dhf8oaa2rfmshnk91q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlCaOnNmpHRg0dYZGIJDeoo9fvWCvNvQk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

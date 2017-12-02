@@ -22,8 +22,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.citrus.aboutcitrus.Helpers.InternetDetector;
-import com.citrus.aboutcitrus.Helpers.MailUtils;
+import com.citrus.aboutcitrus.helper.InternetDetector;
+import com.citrus.aboutcitrus.helper.MailUtils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -61,11 +61,6 @@ import eu.chainfire.libsuperuser.Shell;
 
 public class MailDialogActivity extends Activity implements View.OnClickListener {
 
-    Button attach, sendMail;
-    final String edtSubject = "Citrus-CAF Wishbucket";
-    EditText edtMessage, edtAttachmentData;
-    GoogleAccountCredential mCredential;
-    ProgressDialog mProgress;
     private static final String PREF_ACCOUNT_NAME = "accountName";
     private static final String[] SCOPES = {
             GmailScopes.GMAIL_LABELS,
@@ -75,9 +70,14 @@ public class MailDialogActivity extends Activity implements View.OnClickListener
             GmailScopes.GMAIL_READONLY,
             GmailScopes.MAIL_GOOGLE_COM
     };
-    private InternetDetector internetDetector;
+    final String edtSubject = "Citrus-CAF Wishbucket";
     private final int SELECT_ATTACHMENT = 1;
     public String fileName = "";
+    Button attach, sendMail;
+    EditText edtMessage, edtAttachmentData;
+    GoogleAccountCredential mCredential;
+    ProgressDialog mProgress;
+    private InternetDetector internetDetector;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
