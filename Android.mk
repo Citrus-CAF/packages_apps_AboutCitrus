@@ -5,25 +5,23 @@ LOCAL_MODULE_TAGS := optional
 include $(CLEAR_VARS)
 
 LOCAL_PACKAGE_NAME := AboutCitrus
-LOCAL_CERTIFICATE := platform
 LOCAL_PROGUARD_ENABLED := disabled
 LOCAL_MANIFEST_FILE := app/src/main/AndroidManifest.xml
+LOCAL_SDK_VERSION := current
 
-LOCAL_STATIC_JAVA_LIBRARIES := android-support-v7-appcompat
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-cardview
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-design
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-annotations
-LOCAL_STATIC_JAVA_LIBRARIES +=android-support-v4
+LOCAL_STATIC_ANDROID_LIBRARIES := android-support-v7-appcompat
+LOCAL_STATIC_ANDROID_LIBRARIES += android-support-v7-cardview
+LOCAL_STATIC_ANDROID_LIBRARIES += android-support-design
+LOCAL_STATIC_ANDROID_LIBRARIES += android-support-annotations
+LOCAL_STATIC_ANDROID_LIBRARIES +=android-support-v4
 
 LOCAL_SRC_FILES := $(call all-java-files-under, app/src/main/java faboptions/src/main/java )
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/app/src/main/res \
-    $(LOCAL_PATH)/faboptions/src/main/res \
-    frameworks/support/v7/appcompat/res \
-    frameworks/support/v7/cardview/res \
-    frameworks/support/design/res
+                      $(LOCAL_PATH)/faboptions/src/main/res
 
+LOCAL_USE_AAPT2 := true
 LOCAL_AAPT_FLAGS := --auto-add-overlay
-LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.appcompat:android.support.v7.cardview:android.support.design:com.joaquimley.faboptions
+LOCAL_AAPT_FLAGS += --extra-packages com.joaquimley.faboptions
 
 include $(BUILD_PACKAGE)
 
