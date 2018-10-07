@@ -77,15 +77,15 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.faboptions_log: {
-                        boolean appPresent = appCheck("com.nolanlawson.logcat");
+                        boolean appPresent = appCheck("com.pluscubed.matlog");
 
                         if (appPresent) {
                             Snackbar.make(view, "Opening Logcat Reader", Snackbar.LENGTH_LONG).show();
-                            Intent intent = new Intent("com.nolanlawson.logcat.intents.LAUNCH");
+                            Intent intent = new Intent("com.pluscubed.logcat.intents.LAUNCH");
                             startActivity(intent);
                         } else {
                             Intent i = new Intent(android.content.Intent.ACTION_VIEW);
-                            i.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.nolanlawson.logcat"));
+                            i.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.pluscubed.matlog"));
                             startActivity(i);
                         }
 
@@ -187,46 +187,54 @@ public class MainActivity extends AppCompatActivity {
 
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-            String listArray1[] = new String[]{
-                    "Adarsh MR",
+            final String listArray1[] = new String[]{
+                    "Adarsh M.R",
                     "Rohit Poroli",
-                    "Satyabrat Sahoo",
+                    "Sathish Kumar",
                     "Aditya Garg",
-                    "Rock Kellan"
-
+                    "Satyabrat Sahoo",
+                    "Rock Kellan",
+                    "Minar (Recenz)"
             };
 
-            String listArray2[] = new String[]{
-                    "Founder/Developer",
-                    "Co-Founder/Developer",
-                    "App Developer",
+            final String listArray2[] = new String[]{
+                    "Founder|Developer",
+                    "Co-Founder|Developer",
                     "Developer",
-                    "Designer"
-
+                    "Developer",
+                    "App Developer",
+                    "Designer",
+                    "Bootanimation Designer"
             };
 
             final String uriArray[] = new String[]{
                     "https://plus.google.com/+AdarshMR1",
-                    "https://plus.google.com/u/0/104922572821409006545",
-                    "https://plus.google.com/109706543444382669418",
+                    "https://plus.google.com/+RohitPoroli",
+                    "https://plus.google.com/+sathishkumar2026",
                     "https://plus.google.com/118340790645933812226",
-                    ""
+                    "https://plus.google.com/104922572821409006545",
+                    "",
+                    "https://plus.google.com/+RecenzTastic"
             };
 
             int bgimageArray[] = new int[]{
                     R.drawable.adarsh_bg,
                     R.drawable.rohit_bg,
+                    R.drawable.sathish_bg,
                     R.drawable.satyabrat_bg,
                     R.drawable.aditya_bg,
-                    R.drawable.kellan_bg
+                    R.drawable.kellan_bg,
+                    R.drawable.minar_bg
             };
 
             int imageArray[] = new int[]{
                     R.drawable.adarsh,
                     R.drawable.rohit,
+                    R.drawable.sathish,
                     R.drawable.satyabrat,
                     R.drawable.aditya,
-                    R.drawable.kellan
+                    R.drawable.kellan,
+                    R.drawable.minar
             };
 
             RecyclerView recyclerView = rootView.findViewById(R.id.tcListView);
@@ -261,38 +269,20 @@ public class MainActivity extends AppCompatActivity {
 
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-            String listArray1[] = new String[]{
-                    "Aashish Toshniwal",
-                    "Aditya Garg",
-                    "Davide Garberi",
-                    "Harsh Shandilya",
-                    "Prakash Choudhary",
-                    "Rahif",
-                    "Rohit Poroli",
-                    "Romil P",
-                    "Subham Padhi",
+            final String listArray1[] = new String[]{
             };
 
-            String listArray2[] = new String[]{
-                    "Lettuce",
-                    "Oneplus3/Kenzo/Gemini/Hydrogen",
-                    "Zuk z2/Lenovo Z2 Plus",
-                    "Jalebi",
-                    "Land",
-                    "wt88047",
-                    "Mido",
-                    "OnePlus One",
-                    "Lenovo P2 (Kuntao)",
+            final String listArray2[] = new String[]{
             };
 
             final String uriArray[] = new String[]{
                     "https://plus.google.com/+AdarshMR1",
-                    "https://plus.google.com/u/0/104922572821409006545",
-                    "https://plus.google.com/109706543444382669418",
+                    "https://plus.google.com/+RohitPoroli",
+                    "https://plus.google.com/+sathishkumar2026",
                     "https://plus.google.com/118340790645933812226",
+                    "https://plus.google.com/104922572821409006545",
                     "",
-                    "",
-                    ""
+                    "https://plus.google.com/+RecenzTastic"
             };
 
             RecyclerView recyclerView = rootView.findViewById(R.id.tcListView);
@@ -326,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
 
         @Override
