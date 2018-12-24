@@ -221,8 +221,8 @@ public class MainActivity extends AppCompatActivity {
                     R.drawable.adarsh_bg,
                     R.drawable.rohit_bg,
                     R.drawable.sathish_bg,
-                    R.drawable.satyabrat_bg,
                     R.drawable.aditya_bg,
+                    R.drawable.satyabrat_bg,
                     R.drawable.kellan_bg,
                     R.drawable.minar_bg
             };
@@ -231,8 +231,8 @@ public class MainActivity extends AppCompatActivity {
                     R.drawable.adarsh,
                     R.drawable.rohit,
                     R.drawable.sathish,
-                    R.drawable.satyabrat,
                     R.drawable.aditya,
+                    R.drawable.satyabrat,
                     R.drawable.kellan,
                     R.drawable.minar
             };
