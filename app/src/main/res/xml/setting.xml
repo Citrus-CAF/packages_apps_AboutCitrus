@@ -1,0 +1,13 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Dark Mode">
+
+    <SwitchPreference
+        android:key="checkbox_preference"
+        android:switchTextOff = "Light"
+        android:switchTextOn = "Dark"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
