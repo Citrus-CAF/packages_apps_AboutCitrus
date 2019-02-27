@@ -16,8 +16,8 @@
 
 package com.joaquimley.faboptions;
 
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.Snackbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
 import android.widget.FrameLayout;
 
